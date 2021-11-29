@@ -9,13 +9,17 @@ source:
   sha256: df55e0812fb5985ac9004b2607f4861ecba7e803561282dba58f07215acc4d92
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<36]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - pybind11                               # [build_platform != target_platform]
   host:
     - python
     - pip

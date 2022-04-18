@@ -1,4 +1,4 @@
-{% set version = "2.9" %}
+{% set version = "2.11" %}
 
 package:
   name: pymodes
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymodes/pyModeS-{{ version }}.tar.gz
-  sha256: df55e0812fb5985ac9004b2607f4861ecba7e803561282dba58f07215acc4d92
+  sha256: 821183842b1939401136d2bff6b7f72b5aa67fe781532527ae07b19434d305e5
 
 build:
-  number: 4
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<36]
 

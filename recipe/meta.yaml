@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pymodes/pyModeS-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/p/pymodes/pymodes-{{ version }}.tar.gz
   sha256: 392b19a17c592bd06f79c3d87d55f0c5cba1adf84ee0c3a493468f3e98fef0d9
 
 build:

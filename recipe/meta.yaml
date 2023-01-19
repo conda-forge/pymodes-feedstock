@@ -1,4 +1,4 @@
-{% set version = "2.14" %}
+{% set version = "2.15" %}
 
 package:
   name: pymodes
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymodes/pymodes-{{ version }}.tar.gz
-  sha256: 392b19a17c592bd06f79c3d87d55f0c5cba1adf84ee0c3a493468f3e98fef0d9
+  sha256: e5887351e0509a24686caec4a13f202b67ea6d672aaf61e9a6c7f38bc5e4411d
 
 build:
   number: 0

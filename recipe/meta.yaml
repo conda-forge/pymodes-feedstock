@@ -5,17 +5,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pymodes/pymodes-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pymodes/pymodes-{{ version }}.tar.gz
   sha256: fe73e9ae3bfdb58416f42a08e4e1b132680bac46ff572815caae6eb47dc40941
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<38]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
